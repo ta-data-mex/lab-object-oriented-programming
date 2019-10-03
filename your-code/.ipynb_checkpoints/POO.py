@@ -71,8 +71,7 @@ class Matrix2D:
 
     def __init__(self, mat):
         self.mat = mat
-        self.row = self.rowcolumn()
-        self.col = self.rowcolumn()
+
 # Assign mat to self.mat
 # Assign rows and cols to self.rows and self.cols
 # To find the rows and the cols, use the rowcolumn function and pass self.mat to the function.
@@ -141,6 +140,8 @@ class Matrix2D:
 # Return your result as a Matrix2D(result). This will ensure that we return a new matrix and not a list of lists.
 
 # Your code here:
+    def addition(self,mat1,mat2):
+        np.add((mat1,mat2))
 
     def addition(self, mat1, mat2):
         add = [[0, 0, 0], [0, 0, 0]]
@@ -149,7 +150,7 @@ class Matrix2D:
                 add[x][y] = mat1[x][y] + mat2[x][y]
         return add
 
-        return Matrix2D
+print(Matrix2D([[1,2,3],[4,5,6]]).addition(Matrix2D([[7,8,9],[10,11,12]])).mat)
 
 
 
